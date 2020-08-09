@@ -6,12 +6,10 @@
 /*   By: jaeryul <jaeryul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 13:41:10 by nlee              #+#    #+#             */
-/*   Updated: 2020/08/09 19:31:40 by jaeryul          ###   ########.fr       */
+/*   Updated: 2020/08/09 22:45:17 by jaeryul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
 #include "main.h"
 
 int		main(int argc, char *argv[])

@@ -6,7 +6,7 @@
 #    By: jaeryul <jaeryul@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/09 21:01:10 by jaeryul           #+#    #+#              #
-#    Updated: 2020/08/09 21:01:21 by jaeryul          ###   ########.fr        #
+#    Updated: 2020/08/09 22:46:29 by jaeryul          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,16 +23,16 @@ $(NAME) : $(OBJECTS)
 main.o : main.c main.h
 	$(CC) $(CFLAGS) -c $^
 
-input.o : input.c
+input.o : input.c main.h
 	$(CC) $(CFLAGS) -c $^
 
-memory.o : memory.c
+memory.o : memory.c main.h
 	$(CC) $(CFLAGS) -c $^
 
-map.o : map.c
+map.o : map.c main.h
 	$(CC) $(CFLAGS) -c $^
 
-solve.o : solve.c solve.h
+solve.o : solve.c main.h
 	$(CC) $(CFLAGS) -c $^
 
 condition_check.o :condition_check.c
