@@ -6,12 +6,11 @@
 /*   By: jaeryul <jaeryul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 13:42:15 by nlee              #+#    #+#             */
-/*   Updated: 2020/08/09 19:32:07 by jaeryul          ###   ########.fr       */
+/*   Updated: 2020/08/09 20:51:39 by jaeryul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "main.h"
 
 void	assign_memory(int **map, int **array_l_r, int **array_u_d)
 {

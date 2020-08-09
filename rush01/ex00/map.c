@@ -6,12 +6,11 @@
 /*   By: jaeryul <jaeryul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 13:41:43 by nlee              #+#    #+#             */
-/*   Updated: 2020/08/09 18:31:00 by jaeryul          ###   ########.fr       */
+/*   Updated: 2020/08/09 20:51:32 by jaeryul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "main.h"
 
 void	init_map_to_zero(int **map)
 {

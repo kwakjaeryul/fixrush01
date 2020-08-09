@@ -1,12 +1,26 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jaeryul <jaeryul@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/08/09 21:01:10 by jaeryul           #+#    #+#              #
+#    Updated: 2020/08/09 21:01:21 by jaeryul          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-TARGET = rush-01
+NAME = rush-01
 OBJECTS = main.o input.o memory.o map.o solve.o condition_check.o
 
-$(TARGET) : main.o input.o memory.o map.o solve.o condition_check.o
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJECTS)
+all: $(NAME)
 
-main.o : main.c
+$(NAME) : $(OBJECTS)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS)
+
+main.o : main.c main.h
 	$(CC) $(CFLAGS) -c $^
 
 input.o : input.c
@@ -18,11 +32,18 @@ memory.o : memory.c
 map.o : map.c
 	$(CC) $(CFLAGS) -c $^
 
-solve.o : solve.c
+solve.o : solve.c solve.h
 	$(CC) $(CFLAGS) -c $^
 
-condicondition_check.o :condition_check.c
+condition_check.o :condition_check.c
 	$(CC) $(CFLAGS) -c $^
 
-clean :
-	rm *.o $(TARGET)
+clean:
+	rm -f $(OBJECTS) *.gch
+
+fclean: clean
+	rm -f $(NAME)
+
+re:
+	$(MAKE) fclean
+	$(MAKE) all

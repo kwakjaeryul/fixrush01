@@ -6,11 +6,9 @@
 /*   By: jaeryul <jaeryul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 13:40:41 by nlee              #+#    #+#             */
-/*   Updated: 2020/08/09 19:34:01 by jaeryul          ###   ########.fr       */
+/*   Updated: 2020/08/09 20:51:12 by jaeryul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "solve.h"
 
 int		check_duplicated_row_col(int **map, int row, int col)
 {

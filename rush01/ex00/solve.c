@@ -6,11 +6,10 @@
 /*   By: jaeryul <jaeryul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 13:41:23 by nlee              #+#    #+#             */
-/*   Updated: 2020/08/09 19:31:40 by jaeryul          ###   ########.fr       */
+/*   Updated: 2020/08/09 20:53:03 by jaeryul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.h"
 #include "solve.h"
 
 int		increase_row_col(int **map, int *row, int *col)
