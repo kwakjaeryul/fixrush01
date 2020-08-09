@@ -6,7 +6,7 @@
 /*   By: jaeryul <jaeryul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 13:41:23 by nlee              #+#    #+#             */
-/*   Updated: 2020/08/09 18:35:07 by jaeryul          ###   ########.fr       */
+/*   Updated: 2020/08/09 19:31:40 by jaeryul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int		increase_row_col(int **map, int *row, int *col)
 	return (0);
 }
 
-int		solve_with_dfs(int **map, int **array_of_left_right, int **array_of_up_down)
+int		solve_with_dfs(int **map, int **array_l_r, int **array_u_d)
 {
 	int row;
 	int col;
@@ -52,10 +52,10 @@ int		solve_with_dfs(int **map, int **array_of_left_right, int **array_of_up_down
 		map[row][col] = val;
 		if (!check_duplicated_row_col(map, row, col))
 		{
-			if ((check_row(map, row, array_of_left_right) &&
-						check_col(map, col, array_of_up_down)))
+			if ((check_row(map, row, array_l_r) &&
+						check_col(map, col, array_u_d)))
 			{
-				if (solve_with_dfs(map, array_of_left_right, array_of_up_down))
+				if (solve_with_dfs(map, array_l_r, array_u_d))
 					return (1);
 			}
 		}

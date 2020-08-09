@@ -6,7 +6,7 @@
 /*   By: jaeryul <jaeryul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 13:42:02 by nlee              #+#    #+#             */
-/*   Updated: 2020/08/09 18:31:29 by jaeryul          ###   ########.fr       */
+/*   Updated: 2020/08/09 19:34:56 by jaeryul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int		check_argument(int argc, char *argv[])
 	return (1);
 }
 
-void	put_into_arrays(char *argv[], int **array_of_left_right, int **array_of_up_down)
+void	put_into_arrays(char *argv[], int **array_l_r, int **array_u_d)
 {
 	int i;
 	int a;
@@ -60,10 +60,10 @@ void	put_into_arrays(char *argv[], int **array_of_left_right, int **array_of_up_
 		b = (i + 4) * 2;
 		c = (i + 8) * 2;
 		d = (i + 12) * 2;
-		array_of_up_down[i][0] = argv[1][a] - '0';
-		array_of_up_down[i][1] = argv[1][b] - '0';
-		array_of_left_right[i][0] = argv[1][c] - '0';
-		array_of_left_right[i][1] = argv[1][d] - '0';
+		array_u_d[i][0] = argv[1][a] - '0';
+		array_u_d[i][1] = argv[1][b] - '0';
+		array_l_r[i][0] = argv[1][c] - '0';
+		array_l_r[i][1] = argv[1][d] - '0';
 		i++;
 	}
 }

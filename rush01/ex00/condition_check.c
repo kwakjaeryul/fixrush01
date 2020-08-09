@@ -6,7 +6,7 @@
 /*   By: jaeryul <jaeryul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 13:40:41 by nlee              #+#    #+#             */
-/*   Updated: 2020/08/09 18:31:34 by jaeryul          ###   ########.fr       */
+/*   Updated: 2020/08/09 19:34:01 by jaeryul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int		check_duplicated_row_col(int **map, int row, int col)
 	return (0);
 }
 
-int		check_either_left_or_right(int **map, int row, int **array_of_left_right, int inverse)
+int		check_either_l_or_r(int **map, int row, int **array_l_r, int inverse)
 {
 	int i;
 	int k;
@@ -52,12 +52,12 @@ int		check_either_left_or_right(int **map, int row, int **array_of_left_right, i
 		}
 		i++;
 	}
-	if (count == array_of_left_right[row][inverse])
+	if (count == array_l_r[row][inverse])
 		return (1);
 	return (0);
 }
 
-int		check_either_up_or_down(int **map, int col, int **array_of_up_down, int inverse)
+int		check_either_u_or_d(int **map, int col, int **array_u_d, int inverse)
 {
 	int i;
 	int k;
@@ -81,25 +81,25 @@ int		check_either_up_or_down(int **map, int col, int **array_of_up_down, int inv
 		}
 		i++;
 	}
-	if (count == array_of_up_down[col][inverse])
+	if (count == array_u_d[col][inverse])
 		return (1);
 	return (0);
 }
 
-int		check_row(int **map, int row, int **array_of_left_right)
+int		check_row(int **map, int row, int **array_l_r)
 {
 	int is_valid;
 
-	is_valid = check_either_left_or_right(map, row, array_of_left_right, 0)
-		&& check_either_left_or_right(map, row, array_of_left_right, 1);
+	is_valid = check_either_l_or_r(map, row, array_l_r, 0)
+		&& check_either_l_or_r(map, row, array_l_r, 1);
 	return (is_valid);
 }
 
-int		check_col(int **map, int col, int **array_of_up_down)
+int		check_col(int **map, int col, int **array_u_d)
 {
 	int is_valid;
 
-	is_valid = check_either_up_or_down(map, col, array_of_up_down, 0)
-		&& check_either_up_or_down(map, col, array_of_up_down, 1);
+	is_valid = check_either_u_or_d(map, col, array_u_d, 0)
+		&& check_either_u_or_d(map, col, array_u_d, 1);
 	return (is_valid);
 }
